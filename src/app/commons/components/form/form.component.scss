@@ -1,0 +1,24 @@
+@use "../../../../styles.scss" as *;
+
+:host {
+  @include full-view();
+  flex-direction: column;
+  gap: 4rem;
+}
+
+h1 {
+  font-weight: 800;
+  color: $primary-text-color;
+  font-size: text-size("big");
+}
+
+form {
+  @include flex-center(column);
+  width: 80%;
+  max-width: 600px;
+  height: 80%;
+  background-color: $secondary-background-color;
+  border-radius: 20px;
+  filter: drop-shadow(4px 4px 10px $secondary-decorative-color);
+  padding: 1rem;
+}

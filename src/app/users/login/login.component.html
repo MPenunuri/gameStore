@@ -1,1 +1,8 @@
-<p>login works!</p>
+<app-form [title]="'Inicia sesión'">
+  <app-email-input></app-email-input>
+  <app-password-input></app-password-input>
+  <app-button [name]="'Ingresar'"></app-button>
+  <a routerLink="/users/register"
+    >¿No tienes cuenta?<span class="highlight">Regístrate</span></a
+  >
+</app-form>

@@ -1,1 +1,10 @@
-<p>register works!</p>
+<app-form [title]="'Regístrate como usuario'">
+  <app-text-input></app-text-input>
+  <app-email-input></app-email-input>
+  <app-password-input></app-password-input>
+  <app-password-input [name]="'Confirmar contraseña'"></app-password-input>
+  <app-button [name]="'Registrarme'"></app-button>
+  <a routerLink="/users/login"
+    >¿Ya tienes cuenta?<span class="highlight">Inicia sesión</span></a
+  >
+</app-form>

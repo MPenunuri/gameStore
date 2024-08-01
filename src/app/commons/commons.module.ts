@@ -33,5 +33,21 @@ import { DropdownMenuComponent } from './components/header/nav-bar/menu-item/dro
     DropdownMenuComponent,
   ],
   imports: [CommonModule],
+  exports: [
+    FormComponent,
+    TextInputComponent,
+    EmailInputComponent,
+    PasswordInputComponent,
+    TextAreaComponent,
+    DateInputComponent,
+    ButtonComponent,
+    TitleComponent,
+    SubtitleComponent,
+    HeaderComponent,
+    NavBarComponent,
+    MenuComponent,
+    MenuItemComponent,
+    DropdownMenuComponent,
+  ],
 })
 export class CommonsModule {}
