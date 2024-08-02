@@ -14,6 +14,7 @@ import { NavBarComponent } from './components/header/nav-bar/nav-bar.component';
 import { MenuComponent } from './components/header/nav-bar/menu/menu.component';
 import { MenuItemComponent } from './components/header/nav-bar/menu-item/menu-item.component';
 import { DropdownMenuComponent } from './components/header/nav-bar/menu-item/dropdown-menu/dropdown-menu.component';
+import { ConfirmPasswordInputComponent } from './components/form/confirm-password-input/confirm-password-input.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { DropdownMenuComponent } from './components/header/nav-bar/menu-item/dro
     MenuComponent,
     MenuItemComponent,
     DropdownMenuComponent,
+    ConfirmPasswordInputComponent,
   ],
   imports: [CommonModule],
   exports: [
@@ -48,6 +50,7 @@ import { DropdownMenuComponent } from './components/header/nav-bar/menu-item/dro
     MenuComponent,
     MenuItemComponent,
     DropdownMenuComponent,
+    ConfirmPasswordInputComponent,
   ],
 })
 export class CommonsModule {}

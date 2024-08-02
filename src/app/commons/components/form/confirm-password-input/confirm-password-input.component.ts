@@ -3,18 +3,18 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { TextInputComponent } from '../text-input/text-input.component';
 
 @Component({
-  selector: 'app-date-input',
-  templateUrl: './date-input.component.html',
-  styleUrl: './date-input.component.scss',
+  selector: 'app-confirm-password-input',
+  templateUrl: './confirm-password-input.component.html',
+  styleUrl: './confirm-password-input.component.scss',
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => DateInputComponent),
+      useExisting: forwardRef(() => ConfirmPasswordInputComponent),
       multi: true,
     },
   ],
 })
-export class DateInputComponent implements ControlValueAccessor {
+export class ConfirmPasswordInputComponent implements ControlValueAccessor {
   value: string = '';
   onChange = (value: string) => {};
   onTouched = () => {};
