@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DataService } from '../../core/services/data.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -10,7 +11,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class RegisterComponent {
   registerForm: FormGroup;
 
-  constructor(private dataService: DataService, private fb: FormBuilder) {
+  constructor(
+    private dataService: DataService,
+    private fb: FormBuilder,
+    private router: Router
+  ) {
     this.registerForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -22,7 +27,6 @@ export class RegisterComponent {
   addUser(user: { name: string; email: string; password: string }): void {
     const newUser = { id: this.dataService.getUsers().length + 1, ...user };
     this.dataService.addUser(newUser);
-    console.log(this.dataService.getUsers());
   }
 
   onSubmit() {
@@ -35,5 +39,6 @@ export class RegisterComponent {
     }
     const user = { name, email, password };
     this.addUser(user);
+    this.router.navigate(['/users/login']);
   }
 }
