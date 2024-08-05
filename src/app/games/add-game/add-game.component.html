@@ -1,0 +1,41 @@
+<app-form
+  [title]="'Agregar nuevo videojuego'"
+  (ngSubmit)="onSubmit()"
+  [formGroup]="registerForm"
+>
+  <app-text-input
+    formControlName="title"
+    [name]="'title'"
+    [label]="'Título'"
+    [holder]="'Ingresa el título'"
+  ></app-text-input>
+  <app-text-area
+    formControlName="description"
+    [name]="'description'"
+    [label]="'Descripción'"
+    [holder]="'Ingresa descripción...'"
+  ></app-text-area>
+  <app-date-input
+    formControlName="releaseDate"
+    [name]="'releaseDate'"
+    [label]="'Fecha de lanzamiento'"
+  ></app-date-input>
+  <app-number-input
+    formControlName="rating"
+    [name]="'rating'"
+    [label]="'Rating'"
+    [decimals]="1"
+  ></app-number-input>
+  <app-number-input
+    formControlName="downloads"
+    [name]="'downloads'"
+    [label]="'Descargas'"
+    [decimals]="0"
+  ></app-number-input>
+  <app-checkbox-input
+    formControlName="comingSoon"
+    [name]="'comingSoon'"
+    [label]="'Próximamente'"
+  ></app-checkbox-input>
+  <app-button [name]="'Agregar'"></app-button>
+</app-form>

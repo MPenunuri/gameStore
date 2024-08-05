@@ -7,14 +7,11 @@ import { PasswordInputComponent } from './components/form/password-input/passwor
 import { TextAreaComponent } from './components/form/text-area/text-area.component';
 import { DateInputComponent } from './components/form/date-input/date-input.component';
 import { ButtonComponent } from './components/button/button.component';
-import { TitleComponent } from './components/title/title.component';
-import { SubtitleComponent } from './components/subtitle/subtitle.component';
-import { HeaderComponent } from './components/header/header.component';
-import { NavBarComponent } from './components/header/nav-bar/nav-bar.component';
-import { MenuComponent } from './components/header/nav-bar/menu/menu.component';
-import { MenuItemComponent } from './components/header/nav-bar/menu-item/menu-item.component';
-import { DropdownMenuComponent } from './components/header/nav-bar/menu-item/dropdown-menu/dropdown-menu.component';
 import { ConfirmPasswordInputComponent } from './components/form/confirm-password-input/confirm-password-input.component';
+import { CardComponent } from './components/card/card.component';
+import { CheckboxInputComponent } from './components/form/checkbox-input/checkbox-input.component';
+import { NumberInputComponent } from './components/form/number-input/number-input.component';
+import { StarRatingComponent } from './components/card/star-rating/star-rating.component';
 
 @NgModule({
   declarations: [
@@ -24,15 +21,12 @@ import { ConfirmPasswordInputComponent } from './components/form/confirm-passwor
     PasswordInputComponent,
     TextAreaComponent,
     DateInputComponent,
+    CheckboxInputComponent,
+    NumberInputComponent,
     ButtonComponent,
-    TitleComponent,
-    SubtitleComponent,
-    HeaderComponent,
-    NavBarComponent,
-    MenuComponent,
-    MenuItemComponent,
-    DropdownMenuComponent,
     ConfirmPasswordInputComponent,
+    CardComponent,
+    StarRatingComponent,
   ],
   imports: [CommonModule],
   exports: [
@@ -42,15 +36,11 @@ import { ConfirmPasswordInputComponent } from './components/form/confirm-passwor
     PasswordInputComponent,
     TextAreaComponent,
     DateInputComponent,
+    CheckboxInputComponent,
+    NumberInputComponent,
     ButtonComponent,
-    TitleComponent,
-    SubtitleComponent,
-    HeaderComponent,
-    NavBarComponent,
-    MenuComponent,
-    MenuItemComponent,
-    DropdownMenuComponent,
     ConfirmPasswordInputComponent,
+    CardComponent,
   ],
 })
 export class CommonsModule {}

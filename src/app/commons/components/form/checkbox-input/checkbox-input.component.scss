@@ -1,0 +1,18 @@
+@use "../../../../../styles.scss" as *;
+
+:host {
+  @include flex-center();
+  width: 80%;
+  min-width: 300px;
+  gap: 2rem;
+}
+
+label {
+  @include standard-label();
+  font-size: map-get($font-sizes, "small");
+}
+
+input {
+  transform: scale(1.75);
+  accent-color: $primary-background-color;
+}

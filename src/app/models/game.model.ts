@@ -1,6 +1,9 @@
 export interface IGame {
-  id: number;
-  name: string;
+  title: string;
   description: string;
-  date: Date;
+  releaseDate: Date;
+  image?: string;
+  rating: number;
+  downloads: number;
+  comingSoon: boolean;
 }

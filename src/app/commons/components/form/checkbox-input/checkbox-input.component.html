@@ -1,0 +1,8 @@
+<label [for]="name">{{ label }}</label>
+<input
+  type="checkbox"
+  (input)="onInputChange($event)"
+  [checked]="value"
+  [id]="name"
+  [name]="name"
+/>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataService } from '../../core/services/data.service';
+import { UsersDataService } from '../../core/services/users-data.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -12,7 +12,7 @@ export class RegisterComponent {
   registerForm: FormGroup;
 
   constructor(
-    private dataService: DataService,
+    private dataService: UsersDataService,
     private fb: FormBuilder,
     private router: Router
   ) {

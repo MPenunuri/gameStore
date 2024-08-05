@@ -1,0 +1,45 @@
+@use "../../../../styles.scss" as *;
+
+:host {
+  @include flex-center(column);
+  gap: 1rem;
+  width: 200px;
+  height: 400px;
+  max-height: 400px;
+  padding: 2rem;
+  text-align: center;
+  background-color: $secondary-background-color;
+  border-radius: 20px;
+  border: 1px solid $primary-decorative-color;
+  filter: drop-shadow(2px 2px 10px $primary-decorative-color);
+
+  h3 {
+    @include flex-center();
+    font-weight: 600;
+    font-size: text-size("regular");
+    margin: 1rem;
+    height: 220px;
+    max-height: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  img {
+    width: 150px;
+    height: 100px;
+    flex-shrink: 0;
+    filter: drop-shadow(2px 2px 10px $primary-background-color);
+  }
+
+  .date {
+    font-size: text-size("light");
+    height: 20px;
+  }
+
+  .description {
+    font-size: text-size("light");
+    height: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

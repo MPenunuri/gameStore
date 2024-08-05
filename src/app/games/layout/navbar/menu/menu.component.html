@@ -1,0 +1,8 @@
+<button (click)="onClick()"><img [src]="imageUrl" alt="menu icon" /></button>
+<menu [ngClass]="{ show: showing }">
+  <li routerLink="/games/popular">Populares</li>
+  <li routerLink="/games/most-downloaded">Más decargados</li>
+  <li routerLink="/games/coming-soon">Próximos</li>
+  <li routerLink="/games/add-game">Agregar</li>
+  <li (click)="logout()">Salir</li>
+</menu>

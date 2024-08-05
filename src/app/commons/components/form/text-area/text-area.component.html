@@ -1,1 +1,10 @@
-<textarea (input)="onInputChange($event)" name="" id=""></textarea>
+<label [for]="name">{{ label }}</label>
+<textarea
+  (input)="onInputChange($event)"
+  (input)="onInputChange($event)"
+  [value]="value"
+  [id]="name"
+  [name]="name"
+  [placeholder]="holder"
+  required
+></textarea>

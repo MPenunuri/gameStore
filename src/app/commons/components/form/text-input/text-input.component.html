@@ -1,8 +1,8 @@
 <label [for]="name">{{ label }}</label>
 <input
+  type="text"
   (input)="onInputChange($event)"
   [value]="value"
-  [type]="name"
   [id]="name"
   [name]="name"
   [placeholder]="holder"

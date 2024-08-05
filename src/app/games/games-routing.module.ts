@@ -1,12 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AllGamesComponent } from './all-games/all-games.component';
-import { RecentlyAddedComponent } from './recently-added/recently-added.component';
+import { LayoutComponent } from './layout/layout.component';
+import { AddGameComponent } from './add-game/add-game.component';
+import { MostPopularComponent } from './most-popular/most-popular.component';
+import { MostDownloadedComponent } from './most-downloaded/most-downloaded.component';
+import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 
 const routes: Routes = [
-  { path: 'all-games', component: AllGamesComponent },
-  { path: 'recently-added', component: RecentlyAddedComponent },
-  { path: '**', pathMatch: 'full', redirectTo: 'all-games' },
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
+      { path: 'popular', component: MostPopularComponent },
+      { path: 'most-downloaded', component: MostDownloadedComponent },
+      { path: 'coming-soon', component: ComingSoonComponent },
+      { path: 'add-game', component: AddGameComponent },
+      { path: '**', pathMatch: 'full', redirectTo: 'popular' },
+    ],
+  },
+  { path: '**', pathMatch: 'full', redirectTo: '' },
 ];
 
 @NgModule({

@@ -1,0 +1,5 @@
+<h3>{{ game.title }}</h3>
+<img [src]="imageUrl" alt="Game image" />
+<p class="date">Lanzamiento: {{ game.releaseDate | date : "dd/MM/yyyy" }}</p>
+<app-star-rating [rating]="game.rating"></app-star-rating>
+<p class="description">{{ game.description }}</p>

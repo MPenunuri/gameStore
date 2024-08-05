@@ -20,7 +20,6 @@ export class LoginComponent {
   onSubmit() {
     const email = this.loginForm.value.email;
     const password = this.loginForm.value.password;
-    console.log('login');
     this.authService.login(email, password);
   }
 }

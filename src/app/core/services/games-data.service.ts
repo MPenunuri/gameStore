@@ -1,0 +1,300 @@
+import { Injectable } from '@angular/core';
+import { IGame } from '../../models/game.model';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class GamesDataService {
+  private games: IGame[] = [
+    {
+      title: 'The Legend of Zelda: Breath of the Wild',
+      description:
+        'An open-world adventure game where you explore the kingdom of Hyrule.',
+      releaseDate: new Date('2017-03-03'),
+      image: 'zelda.jpg',
+      rating: 4.9,
+      downloads: 15000000,
+      comingSoon: false,
+    },
+    {
+      title: 'Cyberpunk 2077',
+      description: 'An open-world RPG set in a dystopian future.',
+      releaseDate: new Date('2020-12-10'),
+      image: 'cyberpunk.jpg',
+      rating: 4.0,
+      downloads: 10000000,
+      comingSoon: false,
+    },
+    {
+      title: 'Elden Ring',
+      description: 'An action RPG developed by FromSoftware.',
+      releaseDate: new Date('2022-02-25'),
+      image: 'elden_ring.jpg',
+      rating: 4.8,
+      downloads: 8000000,
+      comingSoon: false,
+    },
+    {
+      title: 'Hogwarts Legacy',
+      description:
+        'An immersive, open-world action RPG set in the Harry Potter universe.',
+      releaseDate: new Date('2023-02-10'),
+      image: 'hogwarts_legacy.jpg',
+      rating: 2.5,
+      downloads: 5000000,
+      comingSoon: false,
+    },
+    {
+      title: 'Resident Evil Village',
+      description:
+        'A survival horror game and the eighth main installment in the Resident Evil series.',
+      releaseDate: new Date('2021-05-07'),
+      image: 'resident_evil_village.jpg',
+      rating: 4.7,
+      downloads: 7000000,
+      comingSoon: false,
+    },
+    {
+      title: 'Starfield',
+      description: 'An upcoming space exploration RPG from Bethesda.',
+      releaseDate: new Date('2024-11-01'),
+      image: 'starfield.jpg',
+      rating: 2.0,
+      downloads: 0,
+      comingSoon: true,
+    },
+    {
+      title: 'Final Fantasy XVI',
+      description:
+        'The sixteenth main installment in the Final Fantasy series.',
+      releaseDate: new Date('2023-06-22'),
+      image: 'final_fantasy_xvi.jpg',
+      rating: 4.6,
+      downloads: 3000000,
+      comingSoon: false,
+    },
+    {
+      title: 'Hades',
+      description:
+        'A rogue-like dungeon crawler in which you defy the god of the dead.',
+      releaseDate: new Date('2020-09-17'),
+      image: 'hades.jpg',
+      rating: 3.2,
+      downloads: 2000000,
+      comingSoon: false,
+    },
+    {
+      title: 'The Witcher 3: Wild Hunt',
+      description:
+        'An action RPG set in a fantasy universe full of meaningful choices and impactful consequences.',
+      releaseDate: new Date('2015-05-19'),
+      image: 'witcher_3.jpg',
+      rating: 3.8,
+      downloads: 12000000,
+      comingSoon: false,
+    },
+    {
+      title: 'Red Dead Redemption 2',
+      description: 'An epic tale of life in America’s unforgiving heartland.',
+      releaseDate: new Date('2018-10-26'),
+      image: 'red_dead_redemption_2.jpg',
+      rating: 4.9,
+      downloads: 9000000,
+      comingSoon: false,
+    },
+    {
+      title: 'Ghost of Tsushima',
+      description: 'An open-world action-adventure game set in feudal Japan.',
+      releaseDate: new Date('2020-07-17'),
+      image: 'ghost_of_tsushima.jpg',
+      rating: 1.7,
+      downloads: 5000000,
+      comingSoon: false,
+    },
+    {
+      title: 'God of War Ragnarök',
+      description: 'An action-adventure game set in Norse mythology.',
+      releaseDate: new Date('2022-11-09'),
+      image: 'god_of_war_ragnarok.jpg',
+      rating: 4.9,
+      downloads: 6000000,
+      comingSoon: false,
+    },
+    {
+      title: 'Halo Infinite',
+      description: 'The latest installment in the Halo franchise.',
+      releaseDate: new Date('2021-12-08'),
+      image: 'halo_infinite.jpg',
+      rating: 4.4,
+      downloads: 7000000,
+      comingSoon: false,
+    },
+    {
+      title: "Assassin's Creed Valhalla",
+      description: 'An open-world RPG set during the Viking era.',
+      releaseDate: new Date('2020-11-10'),
+      image: 'ac_valhalla.jpg',
+      rating: 3.5,
+      downloads: 6000000,
+      comingSoon: false,
+    },
+    {
+      title: 'FIFA 23',
+      description:
+        'The latest installment in the FIFA series, offering realistic football simulation.',
+      releaseDate: new Date('2022-09-30'),
+      image: 'fifa_23.jpg',
+      rating: 2.2,
+      downloads: 8000000,
+      comingSoon: false,
+    },
+    {
+      title: 'Hollow Knight: Silksong',
+      description:
+        'An upcoming action-adventure game and sequel to Hollow Knight.',
+      releaseDate: new Date('2024-05-01'),
+      image: 'hollow_knight_silksong.jpg',
+      rating: 1.0,
+      downloads: 0,
+      comingSoon: true,
+    },
+    {
+      title: 'Diablo IV',
+      description:
+        'The latest installment in the Diablo franchise, featuring dark, gothic gameplay.',
+      releaseDate: new Date('2023-06-06'),
+      image: 'diablo_iv.jpg',
+      rating: 3.7,
+      downloads: 4000000,
+      comingSoon: false,
+    },
+    {
+      title: 'Forza Horizon 5',
+      description: 'An open-world racing game set in Mexico.',
+      releaseDate: new Date('2021-11-09'),
+      image: 'forza_horizon_5.jpg',
+      rating: 4.8,
+      downloads: 5000000,
+      comingSoon: false,
+    },
+    {
+      title: 'Sonic Frontiers',
+      description: 'An upcoming open-world Sonic the Hedgehog game.',
+      releaseDate: new Date('2024-03-15'),
+      image: 'sonic_frontiers.jpg',
+      rating: 2.8,
+      downloads: 0,
+      comingSoon: true,
+    },
+    {
+      title: 'Metroid Dread',
+      description: 'A 2D action-adventure game featuring Samus Aran.',
+      releaseDate: new Date('2021-10-08'),
+      image: 'metroid_dread.jpg',
+      rating: 4.5,
+      downloads: 2000000,
+      comingSoon: false,
+    },
+    {
+      title: 'Splatoon 3',
+      description: 'A colorful, team-based shooter.',
+      releaseDate: new Date('2022-09-09'),
+      image: 'splatoon_3.jpg',
+      rating: 3.3,
+      downloads: 3000000,
+      comingSoon: false,
+    },
+    {
+      title: 'Call of Duty: Modern Warfare II',
+      description: 'A reboot of the popular Modern Warfare series.',
+      releaseDate: new Date('2022-10-28'),
+      image: 'cod_mw2.jpg',
+      rating: 4.6,
+      downloads: 7000000,
+      comingSoon: false,
+    },
+    {
+      title: 'Monster Hunter Rise',
+      description: 'An action RPG where you hunt down various monsters.',
+      releaseDate: new Date('2021-03-26'),
+      image: 'monster_hunter_rise.jpg',
+      rating: 3.7,
+      downloads: 4000000,
+      comingSoon: false,
+    },
+    {
+      title: 'Ratchet & Clank: Rift Apart',
+      description: 'A platformer game featuring interdimensional gameplay.',
+      releaseDate: new Date('2021-06-11'),
+      image: 'ratchet_clank_rift_apart.jpg',
+      rating: 4.8,
+      downloads: 3000000,
+      comingSoon: false,
+    },
+    {
+      title: 'Street Fighter 6',
+      description: 'The latest installment in the Street Fighter series.',
+      releaseDate: new Date('2023-06-02'),
+      image: 'street_fighter_6.jpg',
+      rating: 2.4,
+      downloads: 2000000,
+      comingSoon: false,
+    },
+    {
+      title: 'Gran Turismo 7',
+      description: 'A realistic driving simulator.',
+      releaseDate: new Date('2022-03-04'),
+      image: 'gran_turismo_7.jpg',
+      rating: 3.6,
+      downloads: 4000000,
+      comingSoon: false,
+    },
+    {
+      title: "Baldur's Gate 3",
+      description: 'An upcoming RPG based on Dungeons & Dragons.',
+      releaseDate: new Date('2024-02-28'),
+      image: 'baldurs_gate_3.jpg',
+      rating: 4.9,
+      downloads: 50,
+      comingSoon: true,
+    },
+    {
+      title: 'Doom Eternal',
+      description: 'A fast-paced first-person shooter.',
+      releaseDate: new Date('2020-03-20'),
+      image: 'doom_eternal.jpg',
+      rating: 4.8,
+      downloads: 50,
+      comingSoon: false,
+    },
+    {
+      title: 'A Plague Tale: Requiem',
+      description:
+        'A sequel to the critically acclaimed A Plague Tale: Innocence.',
+      releaseDate: new Date('2022-10-18'),
+      image: 'a_plague_tale_requiem.jpg',
+      rating: 1.7,
+      downloads: 50,
+      comingSoon: false,
+    },
+    {
+      title: 'Deathloop',
+      description: 'A first-person shooter where you are stuck in a time loop.',
+      releaseDate: new Date('2021-09-14'),
+      image: 'deathloop.jpg',
+      rating: 2.6,
+      downloads: 50,
+      comingSoon: false,
+    },
+  ];
+
+  constructor() {}
+
+  getGames(): IGame[] {
+    return this.games;
+  }
+
+  addGame(game: IGame): void {
+    this.games.push(game);
+  }
+}

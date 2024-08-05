@@ -1,4 +1,4 @@
-import { Component, forwardRef } from '@angular/core';
+import { Component, forwardRef, Input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { TextInputComponent } from '../text-input/text-input.component';
 
@@ -15,6 +15,9 @@ import { TextInputComponent } from '../text-input/text-input.component';
   ],
 })
 export class TextAreaComponent implements ControlValueAccessor {
+  @Input() label: string = '';
+  @Input() name: string = '';
+  @Input() holder: string = '';
   value: string = '';
   onChange = (value: string) => {};
   onTouched = () => {};

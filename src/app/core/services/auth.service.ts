@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { DataService } from './data.service';
+import { UsersDataService } from './users-data.service';
 
 @Injectable({
   providedIn: 'root',
@@ -8,7 +8,7 @@ import { DataService } from './data.service';
 export class AuthService {
   private isAuthenticated: boolean = false;
 
-  constructor(private dataService: DataService, private router: Router) {}
+  constructor(private dataService: UsersDataService, private router: Router) {}
 
   login(email: string, password: string): void {
     const users = this.dataService.getUsers();
